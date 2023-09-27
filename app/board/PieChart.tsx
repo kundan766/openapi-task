@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import Chart from 'chart.js/auto';
 // import Chart from 'chart.js';
+import pie from 'react-chartjs-2';
 
 
 
@@ -35,8 +36,8 @@ function PieChart() {
     
     const ctx = document.getElementById('pieChart');
     
-       pieChartRef.current =  new Chart( ctx, {
-      type: 'pie',
+       pieChartRef.current = new Chart( ctx, {
+        type: "pie",
       data: pieData,
     });
   }, []);
@@ -60,6 +61,38 @@ function PieChart() {
 }
 
 export default PieChart;
+
+
+// components/PieChart.tsx
+
+// import React from 'react';
+// import { Pie } from 'react-chartjs-2';
+
+// interface PieChartProps {
+//   data: number[];
+//   labels: string[];
+// }
+
+// const PieChart: React.FC<PieChartProps> = ({ data, labels }) => {
+//   const chartData = {
+//     labels,
+//     datasets: [
+//       {
+//         data,
+//         backgroundColor: ['red', 'blue', 'green', 'orange', 'purple'], // Add more colors if needed
+//       },
+//     ],
+//   };
+
+//   return (
+//     <div>
+//       <Pie data={chartData} />
+//     </div>
+//   );
+// };
+
+// export default PieChart;
+
 
 
 

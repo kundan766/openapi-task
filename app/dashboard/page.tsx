@@ -18,6 +18,7 @@ import AddIcon from '@mui/icons-material/Add';
 import ProfileCard from '../card/ProfileCard';
 
 
+
 function generateRandomData() {
   const data = [];
   for (let i = 0; i < 5; i++) {
@@ -65,6 +66,9 @@ function Page() {
       },
     });
   }, []);
+
+  
+  
 
   const handleAddProfileClick = () => {
     // Open the profile card when "Add Profile" button is clicked
@@ -153,6 +157,7 @@ function Page() {
         <div className="flex space-x-80 p-10 -mt-10 ">
           <div className="bg-white w-1/3 h-60  rounded-lg shadow-xl">
             <PieChart/>
+          
           </div>
           <div className="bg-white w-1/3 h-60  rounded-lg shadow-xl ">
             {/* Card content goes here */}
@@ -186,5 +191,5 @@ function Page() {
   );
 }
 
-export default Page;
 
+export default Page;
