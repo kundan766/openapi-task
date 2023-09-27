@@ -5,6 +5,10 @@ import Image from 'next/image';
 import { signIn } from 'next-auth/react';
 import { useRouter } from 'next/navigation'; // Import useRouter
 
+
+
+
+
 import GoogleButton from 'react-google-button';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import TwitterIcon from '@mui/icons-material/Twitter';
@@ -43,7 +47,7 @@ export default function Home() {
       <div className='item-center mt-40 ml-60'>
         <h1 className='text-4xl font-bold'>Sign In</h1> <br></br>
         <h1>Sign in to your account</h1><br></br>
-        <GoogleButton onClick={() => signIn('google')} className=' ' />
+        <GoogleButton onClick={() => signIn('google')}  className=' ' />
         <form onSubmit={(e) => handleFormSubmit(e)}>
           <label htmlFor='Email'>Email</label><br></br>
           <input type='text' placeholder='enter email'></input> <br></br>
