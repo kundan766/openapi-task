@@ -1,5 +1,9 @@
 import React, { useEffect, useState, useRef } from 'react';
 import Chart from 'chart.js/auto';
+// import Chart from 'chart.js';
+
+
+
 
 function generateRandomPieData() {
   return {
@@ -16,6 +20,7 @@ function generateRandomPieData() {
 function PieChart() {
   const [pieChartData, setPieChartData] = useState({});
   const pieChartRef = useRef<Chart | null>(null);
+  // const pieChartRef = useRef(null);
 
   useEffect(() => {
     
@@ -27,9 +32,10 @@ function PieChart() {
     const pieData = generateRandomPieData();
     setPieChartData(pieData);
 
-    /
+    
     const ctx = document.getElementById('pieChart');
-    pieChartRef.current = new Chart(ctx, {
+    
+       pieChartRef.current =  new Chart( ctx, {
       type: 'pie',
       data: pieData,
     });
@@ -54,3 +60,14 @@ function PieChart() {
 }
 
 export default PieChart;
+
+
+
+
+
+
+
+
+
+
+      

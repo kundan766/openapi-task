@@ -13,13 +13,14 @@ import GoogleButton from 'react-google-button';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { FormEvent } from 'react';
 
 
 
 export default function Home() {
   const navigation = useRouter(); 
 
-  const handleFormSubmit = async (e) => {
+  const handleFormSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     
