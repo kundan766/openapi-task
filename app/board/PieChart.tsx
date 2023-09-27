@@ -15,19 +15,19 @@ function generateRandomPieData() {
 
 function PieChart() {
   const [pieChartData, setPieChartData] = useState({});
-  const pieChartRef = useRef(null);
+  const pieChartRef = useRef<Chart | null>(null);
 
   useEffect(() => {
-    // Destroy the existing pie chart if it exists
+    
     if (pieChartRef.current) {
       pieChartRef.current.destroy();
     }
 
-    // Generate pie chart data (replace with your data)
+    
     const pieData = generateRandomPieData();
     setPieChartData(pieData);
 
-    // Create a pie chart using Chart.js
+    /
     const ctx = document.getElementById('pieChart');
     pieChartRef.current = new Chart(ctx, {
       type: 'pie',
